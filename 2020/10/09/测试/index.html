@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="laoluokj">
+
+
+
+
+
+<title>高三复习备考- 小题突破——数学文化 | Hexo</title>
+
+
+
+    <link rel="icon" href="/laoluokj/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/laoluokj/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/laoluokj/js/script.js"></script>
+    
+    <script src="/laoluokj/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+    
+
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/laoluokj/">自由杂货铺27号</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/laoluokj/archives">教学日志</a>
+                
+                    <a class="menu-item" href="/laoluokj/category">文章类别</a>
+                
+                    <a class="menu-item" href="/laoluokj/tag">标签选择</a>
+                
+                    <a class="menu-item" href="/laoluokj/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/laoluokj/">自由杂货铺27号</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/laoluokj/archives">教学日志</a>
+                
+                    <a class="menu-item" href="/laoluokj/category">文章类别</a>
+                
+                    <a class="menu-item" href="/laoluokj/tag">标签选择</a>
+                
+                    <a class="menu-item" href="/laoluokj/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">高三复习备考- 小题突破——数学文化</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">laoluokj</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">October 9, 2020&nbsp;&nbsp;14:19:59</a>
+                        </span>
+                    
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>学生2019届文科考生，课题为《高三二轮专题复习——数学文化》总结课，此前经历了一周的专题复习，积累了一些解此类题的经验，但是没有概括和梳理，没有进一步反思和升华。总结课希望利用两个题组以及两道综合例题，将多个知识点呈现出来，有机的结合众多知识点，达到由点出发，形成线面的作用，多角度，多视角的方式看待数学例题，感悟数学文化。<br>希望传达的核心思想是：数学文化有显性和隐性两部分组成，显性是隐形的载体。课堂中不断回顾，不断反思，不断试错纠错，慢慢推进，慢慢提升的过程是数学文化真正的体现，是数学思想、数学精神、数学意识和数学观念的体现。</p>
+<blockquote>
+<p>数学文化，学习策略，题组训练</p>
+</blockquote>
+<h2 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路"></a>设计思路</h2><p>习题教学是课堂教学不可忽视的环节，著名数学家G·波利亚曾经说过：“一个专心的认真备课的教师，能够拿出一个有意义的但又不太复杂的题目，去帮助学生发掘问题的各个方面，使得通过这道题，就好像通过一扇门，把学生引入一个完整的理论领域。”通过设置题组和经典例题巩固新知，发展能力，在提高学生数学素养。</p>
+<p>注重学生的展示，表现出对知识的掌握情况和容易出现错误的关键点。将学生放置在主体地位，老师成为一个旁观者，观察学生的行为特征和察觉学生思考的特点，在出现问题和出现分歧时聆听学生的心声，交流个人心得。尊重学生的独立人格，放大学生的人格魅力，培养其自信心和拼搏斗志。</p>
+<p>数学是每一个学生求学必须要学习的主课，它教给孩子们的不应只是冰冷的数学知识，更重要是要教给学生用数学的眼光看待问题、用数学的思想去思考问题，数学文化具有自己独特的魅力，理解和感悟数学思想、数学精神、数学意识和数学观念对个人发展尤为重要。</p>
+<h2 id="教学目标"><a href="#教学目标" class="headerlink" title="教学目标"></a>教学目标</h2><ol>
+<li>知识与技能：多个高考高频考察知识点</li>
+<li>过程与方法：<ol>
+<li>题组引导，大题收官</li>
+<li>由浅入深，层层推进</li>
+<li>反思感悟，内化吸收</li>
+</ol>
+</li>
+<li>情感态度价值观：<ol>
+<li>用数学的观点观察现实，构造数学模型，学习数学的语言、图表、符号表示，进行数学交流。</li>
+<li>通过理性思维，培养严谨素质，追求创新精神，欣赏数学之美。</li>
+</ol>
+</li>
+</ol>
+<h2 id="教学重点难点"><a href="#教学重点难点" class="headerlink" title="教学重点难点"></a>教学重点难点</h2><p>教学重点：梳理清楚数学文化类试题的解答步骤和回顾多个高中数学必考知识点</p>
+<p>教学难点：引导学生利用题组和例题将众多知识点融汇贯通，构建起较为完整的知识体系。</p>
+<h2 id="教学过程"><a href="#教学过程" class="headerlink" title="教学过程"></a>教学过程</h2><h3 id="新课引入"><a href="#新课引入" class="headerlink" title="新课引入"></a>新课引入</h3><h4 id="交流个人对数学文化复习的认识"><a href="#交流个人对数学文化复习的认识" class="headerlink" title="交流个人对数学文化复习的认识"></a>交流个人对数学文化复习的认识</h4><p>数学文化专题复习比较困难，复习内容编排难度较大，很可能出现出力不讨好的状况。真实的考试中，学生肯定会面临新的试题，这代表着备考中完成的所有例题都不会完封不动的出现试卷中，需要学生能够真正理解“数学文化”甚至理解“文化”这一类难以解释说明的字眼。</p>
+<p>它要求我们解决的不是习题，而是问题，重点强调了学以致用，灵活变通，触类旁通的能力，能力不是一朝一夕形成的，需要长期的积累和领悟，以及规律的训练和巩固。</p>
+<p>它往往是一套试卷中的亮点，天然具有“网红”潜质，具有文化深度，全新视角，创新精神，同时它又琢磨不透，摸不到脉络。</p>
+<blockquote>
+<ol>
+<li>表达老师个人一点见解，指导学生认识数学文化复习策略</li>
+<li>希望能力尚可的学生能够向更加有深度的问题发起挑战，从提高能力的角度入手，组织和安排自己的复习内容</li>
+<li>希望能力不足的学生能够量力而行，从高考整体成功的角度出发，明确取舍得失，有的放矢，高效备考</li>
+</ol>
+</blockquote>
+<h4 id="展示2019年高考全国卷"><a href="#展示2019年高考全国卷" class="headerlink" title="展示2019年高考全国卷"></a>展示2019年高考全国卷</h4><ol>
+<li>“考了朵云？”</li>
+<li>“断臂维纳斯有多高？”</li>
+<li>“你的草稿纸用完了吗？”</li>
+</ol>
+<p>探讨人体黄金分割之美,将美育教育融入数学教育,考查类比归纳与合情推理,渗透了逻辑推理和数学运算的核心素养。让维纳斯进入了高考数学,可以说这是一次全国性的数学美的普及活动,使人们对抽象的数学不得不刮目相看。</p>
+<blockquote>
+<ol>
+<li>理解数学文化类型试题在高考中体现的意义</li>
+<li>感受数学与其他学科相互渗透的关系</li>
+<li>复习回顾已经精细讲解的经典试题</li>
+<li>提醒学生不能怕，也不可怕，可以通过必要的反思和总结，找到其中的关键要素，只要积极的思考，深入的探索，可以构建出应对此类试题的方法论和策略集</li>
+</ol>
+</blockquote>
+<h3 id="第一组基础知识回顾"><a href="#第一组基础知识回顾" class="headerlink" title="第一组基础知识回顾"></a>第一组基础知识回顾</h3><p>请四位同学上台，兵分四路为我们解决简单的例题。</p>
+<p>老师及其他同学观察演示同学的完成情况，协助他们一起完成例题。</p>
+<p>{二倍角公式}</p>
+<p>已知函数 $y=(\sin x + \cos x)^2 + 2\cos^{2} x$,求函数的递减区间？</p>
+<blockquote>
+<ol>
+<li>展现二倍角公式常考的方式方法</li>
+<li>复习三角函数的基本方法基本技能</li>
+<li>发现学生存在的问题</li>
+</ol>
+</blockquote>
+<p>{简单几何体的表面积和体积公式}</p>
+<blockquote>
+<ol>
+<li>强调公式记忆的重要性</li>
+<li>强调公式使用的状况</li>
+<li>提醒同学主动记忆比较复杂的台体计算公式</li>
+</ol>
+</blockquote>
+<p>{扇形面积}</p>
+<p>在半径为$6 cm$的圆中,圆心角为 $120^{\circ}$的扇形的面积是多少$cm^{2}$.</p>
+<blockquote>
+<ol>
+<li>简单数据回顾扇形面积计算公式</li>
+<li>对比真实计算状况和理想化计算状况在计算难度上的差别，提醒此时的考点蕴含对数学运算核心素养的考察</li>
+</ol>
+</blockquote>
+<p>{写出常用的几组勾股数}</p>
+<blockquote>
+<ol>
+<li>利用记忆的技巧记忆常见的勾股数</li>
+<li>提高对数字的敏感性，当看到与记忆内容有关的数据时，可以预估计算的难以程度，进一步明确步骤和方向</li>
+<li>利用记忆提高运算的速度，为考试争取宝贵时间</li>
+</ol>
+</blockquote>
+<h3 id="第一道数学文化综合例题"><a href="#第一道数学文化综合例题" class="headerlink" title="第一道数学文化综合例题"></a>第一道数学文化综合例题</h3><p>所有同学完成考场中出现的一道试题。</p>
+<p>请一个同学为我们展现一下做题的全貌。</p>
+<blockquote>
+<ol>
+<li>尽可能还原你解答的所有过程</li>
+<li>尽可能说出你当下的想法</li>
+<li>尽可能为我们讲解你为什么这样做</li>
+</ol>
+</blockquote>
+<p>教师充当一个解说员，为其他的同学说说我看到了什么，教师自己想到了什么。</p>
+<p>{综合练习}</p>
+<p>《九章算术》是我国古代著名数学经典，其中对勾股定理的论术比西方早一千多年，其中有这样一个问题：“今有圆材埋在壁中，不知大小；以锯锯之，深一寸，锯道长一尺，问径几何？”<br>其意为：今有一圆柱形木材，埋在墙壁中，不知其大小，用锯去锯该材料，锯口深1寸，锯道长1尺，问这块圆柱形木料的直径是多少？长为1丈的圆柱形木材部分镶嵌在墙体中，截面图如图所示（阴影部分为镶嵌在墙体内的部分）.已知弦$AB=1$尺，弓形高$CD=1$寸，估算该木材镶嵌在墙中的体积约为()</p>
+<p>(注：1丈=10尺=100寸，$\pi \thickapprox 3.14,\sin 22.5^{^\circ} \thickapprox \frac{5}{13}$)</p>
+<p>A: $600 $立方寸 \quad<br>B: $610 $立方寸 \quad<br>C: $620 $立方寸<br>D: $633 $立方寸 </p>
+<h3 id="语言引导解决问题"><a href="#语言引导解决问题" class="headerlink" title="语言引导解决问题"></a>语言引导解决问题</h3><ol>
+<li><p>明确问题（试题提问）</p>
+<ol>
+<li>体积问题？</li>
+<li>谁的体积？</li>
+<li>有公式吗？</li>
+<li>如果没有公式怎么转化？转化成什么？</li>
+<li>扇形面积 - 三角形面积（转化后问题）</li>
+<li>扇形面积有公式吗？</li>
+<li>三角形面积有公式吗？</li>
+</ol>
+</li>
+<li><p>数据问题（操作问题）</p>
+<ol>
+<li>半径有吗？</li>
+<li>夹角有吗？</li>
+</ol>
+</li>
+</ol>
+<blockquote>
+<ol>
+<li>激发学生的思路，让学生学会主动思考</li>
+<li>自主创新，将知识与实践相结合</li>
+</ol>
+</blockquote>
+<h3 id="教师解读学生解题过程"><a href="#教师解读学生解题过程" class="headerlink" title="教师解读学生解题过程"></a>教师解读学生解题过程</h3><h5 id="审题"><a href="#审题" class="headerlink" title="审题"></a>审题</h5><pre><code>1.  图像是最直观的语言
+1.  理解白话文强于理解文言文
+1.  括号里面的内容就是启示
+1.  答案是一种指引</code></pre>
+<h5 id="明确问题"><a href="#明确问题" class="headerlink" title="明确问题"></a>明确问题</h5><pre><code>1.  连续向自己提问
+1.  将问题转化成自己熟悉的问题
+1.  利用分步和分类的方法推进和拓展
+1.  平面问题基本上都是三角形的问题
+1.  必要的草图记录思考的过程</code></pre>
+<h5 id="设计步骤"><a href="#设计步骤" class="headerlink" title="设计步骤"></a>设计步骤</h5><pre><code>1.  学习以丰富多变，创新开拓为原则
+1.  考试以简单高效，适合自己为原则
+1.  设计没有标准答案，多尝试，总会有适合自己的方案
+1.  做出自己顺手的工具包</code></pre>
+<h5 id="执行运算"><a href="#执行运算" class="headerlink" title="执行运算"></a>执行运算</h5><pre><code>1.  整齐的书写，把每一道小题当做大题来做
+1.  明确的位置，步骤设计中的层级，分类
+1.  知道对于全题来说它的作用，它的轻重缓急程度
+1.  将运算与思考分离开进行，思考已经有整体性了之后，运算才开始</code></pre>
+<h5 id="运算建议"><a href="#运算建议" class="headerlink" title="运算建议"></a>运算建议</h5><pre><code>  1.  能在心里算，不往纸上写，大脑永远跑走手前面
+  1.  能写一行，不写两行，能简写，不全写
+  1.  马虎的同义词是你脑子短路了，别给自己一个借   </code></pre>
+<h3 id="第二组基础知识回顾"><a href="#第二组基础知识回顾" class="headerlink" title="第二组基础知识回顾"></a>第二组基础知识回顾</h3><p>请一位同学在黑板解答例题。</p>
+<p>老师检查基础知识掌握情况，回顾对应方法使用的条件和提示变通的想法。</p>
+<p>{基本不等式}</p>
+<p>若 $x&gt;0,y&gt;0$,且 $x+y=18$,则 $\sqrt{xy}$的最大值为？</p>
+<p>  A: $9$<br>  B: $18$<br>  C: $36$<br>  D: $81$</p>
+<p>{圆锥曲线运算}</p>
+<p>已知椭圆C $\frac{y^2}{a^2} + \frac{x^2}{b^2} = 1 (a&gt;b&gt;0)$经过点 $\frac{3}{2},1$,一个焦点是 $F(0,1)$.求椭圆C的方程.</p>
+<blockquote>
+<ol>
+<li>设置铺垫，让学生完成熟悉的内容，为第二道大题架设梯子，帮助学生发现最关键的问题。</li>
+<li>复习回顾常考知识点，引导学生发现本质问题。</li>
+<li>注意试题中设置的阅读陷阱。</li>
+<li>尝试使用猜想和验证的方法跳过步骤繁琐的运算。</li>
+<li>体现出的知识点：基本不等式，解析几何计算。</li>
+</ol>
+</blockquote>
+<h3 id="第二道数学文化综合例题"><a href="#第二道数学文化综合例题" class="headerlink" title="第二道数学文化综合例题"></a>第二道数学文化综合例题</h3><p>请一位同学在黑板解答例题。</p>
+<p>老师解读学生完成状况，帮助其发现问题，突破核心考点。</p>
+<p>在古希腊数学家海伦的著作《测地术》中记载了著名的海伦公式,利用三角形的三边长求三角形的面积,若三角形的三边分别为 $a,b,c$,则其面积 $S = \sqrt{p(p-a)(p-b)(p-c)}$,这里 $p = \frac{a+b+c}{2}$.已知在 $\angle ABC$中,$BC=6,AB=2AC$,则当 $ABC$的面积最大时,$\sin A = ?$</p>
+<blockquote>
+<ol>
+<li>考察了学生的化简整理运算的能力。</li>
+<li>对比数形结合在解题中的差异。</li>
+<li>链接前一位同学的解题步骤，变通使用相应的知识点，达到解题的目的，让学生感受到知识之间的关系，体会问题不同的呈现方式。</li>
+<li>提示学生在解题是提前思考解题策略的问题，优先选择省时节力的解答方案</li>
+<li>培养学生大胆猜测和小心求证的精神</li>
+<li>体现出的知识点：余弦定理，基本不等式，换元法降次，二次函数求最值，建立之间坐标系解决几何问题，向量数量积，三角恒等式</li>
+</ol>
+</blockquote>
+<h2 id="课堂总结"><a href="#课堂总结" class="headerlink" title="课堂总结"></a>课堂总结</h2><h3 id="课堂总结一-关于数学文化"><a href="#课堂总结一-关于数学文化" class="headerlink" title="课堂总结一_关于数学文化"></a>课堂总结一_关于数学文化</h3><p>我们对数学文化专题做了一个小小的总结，个人觉得不够，任何文化都不是学习获得，需要长时间的熏陶和积累，最终对你产生非常巨大的影响。</p>
+<p>数学文化有显性和隐性两部分组成.</p>
+<p>显性的数学文化是指数学概念、数学公式与定理、数学方法、数学语言、数学问题等知识性成分；隐性的数学文化是指数学思想、数学精神、数学意识和数学观念等观念性成分.</p>
+<p>观念性成分一般隐含在知识性成分之中，知识性成分是观念性成分的载体，观念性成分随着知识性成分的承传而传播，随着知识性成分的发展而发展.将数学文化渗透到数学课堂教学中，不仅有助于学生对知识的理解， 提高学生的文化修养，还能让学生学到终身受益的数学精神、思想和方法.</p>
+<p>不要小看现在积累的每一道试题，测试的每一份试卷，如果你认真的对待它，它会融入你的血脉，在你以后遇到问题时自然而然的流淌出来一些小小的，但是异常珍贵的灵感。</p>
+<p>不要小看现在解决的每一个问题，书写的每一份答案，如何你认真的对待它，它会渗入你的思想，在你以后遇到麻烦时火石电光的迸发出来一些奇思妙想，帮你度过难关。</p>
+<h3 id="课堂总结二-关于课堂进程"><a href="#课堂总结二-关于课堂进程" class="headerlink" title="课堂总结二_关于课堂进程"></a>课堂总结二_关于课堂进程</h3><p>{数学文化试题的解答步骤:</p>
+<p>明确问题</p>
+<p>设计步骤</p>
+<p>执行运算</p>
+<p>{本课中知识梳理}</p>
+<ol>
+<li>简单几何体积</li>
+<li>解三角形</li>
+<li>三角函数</li>
+<li>解析几何常见运算</li>
+<li>基本不等式</li>
+<li>向量的数量积</li>
+<li>二次函数</li>
+<li>面积计算</li>
+<li>比例运算</li>
+</ol>
+<h3 id="课堂总结三-关于高考备考"><a href="#课堂总结三-关于高考备考" class="headerlink" title="课堂总结三_关于高考备考"></a>课堂总结三_关于高考备考</h3><p>给大家介绍过丹尼尔·卡尼曼《思考的快与慢》，我们需要利用快和慢的连续切换达到省时节力和准确无误，帮助我们考场发挥出色，取得好成绩。</p>
+<p>现在是不是可以提出一个”备考的多与少”。你们是高三的学生，还是一个月的复习时间，天气炎热，心里急躁，那么试卷没有做，那么多任务没有完成，心中要急，但是不要燥。</p>
+<p>第三轮复习，需要把多变成少。怎么做到？</p>
+<ol>
+<li>扎扎实实地完成老师讲解的重点习题</li>
+<li>不要再停留在解题的层面，上升到解决问题的层面</li>
+<li>熟悉的动作反复练习，变成自然的条件反射</li>
+</ol>
+<h2 id="教学反思"><a href="#教学反思" class="headerlink" title="教学反思"></a>教学反思</h2><p>本课结束后教研组进行了评课议课活动，对此课进行了认真的剖析，提出众多中肯的意见。</p>
+<ol>
+<li>第一个尖锐的问题是：数学文化体现在哪里？</li>
+<li>第二个尖锐的问题是：这么多内容到底哪里是重点？</li>
+</ol>
+<p>第一个问题反映了课程不完整的问题，课程设计如此，但是在执行中出现了被设计的没有提及，没有被设计的内容临时加入，显然由于时间问题，没有旗帜鲜明的提出自己对数学文化的认识，导致自己觉得已经讲过，讲授的内容反映了显性文化，讲解的过程，解答的过程体现隐形的文化，差画龙点睛的一笔，差深化拔高的一下，需要在语言的凝练和观点的准确方面继续努力。</p>
+<p>教学设计是指导教学的工具，照本宣科往往会忽视现场同学的表现，忽视了学生的主体地位。个人认为反馈是课堂中最宝贵的东西，人和人之间在语言眼神动作情感上的交流是教学设计很难表现的内容，很多内容无法用文字和语言表达清楚，但是在与朝夕相处的同学之间却可以用其他的方式交流。笔者在多次课堂中感受到自己其实不是老师，自己其实是从课堂反馈中获得的学生。</p>
+<p>第二个问题反映了课程理解的不同。我们的学生是长期处于学困处境的学生，题组中的基础练习是他们能够完成的内容，即便非常的简单，但是对他们很困难。综合性的例题从来都是跳过不做，连挑战的念头都没有。我认为他们差的恰恰是隐性的数学精神，数学意识，数学观念，希望他们抛弃简单例题的反复练习，将知识链接和知识贯通作为重点，转变对重点的认识，总结的习惯，自己领悟的习惯是重点，拆解组合的过程是重点，慢下来，深入一些的理念是重点。重点不是解决一些题，而是理解具有怎样的思维方式才可以让我们解题。</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>laoluokj</span>
+                    </p>
+                
+                
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/laoluokj/tags/%E8%8E%B7%E5%A5%96%E4%BD%9C%E5%93%81/"># 获奖作品</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/laoluokj/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/laoluokj/2020/10/09/%E6%B5%8B%E8%AF%952/">测试2</a>
+            
+            
+            <a class="next" rel="next" href="/laoluokj/2020/10/09/hello-world/">Hello World</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© laoluokj | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>
